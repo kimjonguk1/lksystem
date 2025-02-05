@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LKsystem</title>
     <link rel="stylesheet" th:href="@{./home/styles/home.css}">
-    <link rel="stylesheet" th:href="@{./about/styles/about.css}">
+    <link rel="stylesheet" th:href="@{./contact/styles/contact.css}">
 </head>
 <body>
 <div th:replace="~{fragments/header :: header}"></div>
 <main>
-    <section class="about-header">
-        <div class="about-bg" th:style="'background-image: url(/about/images/about.jpg)'"></div>
-        <h1 class="about-title">회사 소개</h1>
+    <section class="contact-header">
+        <div class="contact-bg" th:style="'background-image: url(/contact/images/contact.jpg)'"></div>
+        <h1 class="contact-title">견적 문의</h1>
     </section>
 </main>
 <div th:replace="~{fragments/footer :: footer}"></div>
