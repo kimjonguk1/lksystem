@@ -19,7 +19,14 @@ public class HomeController {
     @RequestMapping(value = "/about", method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
     public ModelAndView about() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("about/about");
+        modelAndView.setViewName("home/about");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/location", method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
+    public ModelAndView location() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("home/location");
         return modelAndView;
     }
 }

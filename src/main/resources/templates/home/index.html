@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/8bb132eaf4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div th:replace="fragments/header :: header"></div>
+<div th:replace="~{fragments/header :: header}"></div>
 <main>
     <section class="hero">
         <div class="carousel">
@@ -61,7 +61,7 @@
         </div>
     </section>
 </main>
-<div th:replace="fragments/footer :: footer"></div>
+<div th:replace="~{fragments/footer :: footer}"></div>
 
 </body>
 </html>

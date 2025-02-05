@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKsystem</title>
+    <link rel="stylesheet" th:href="@{./home/styles/home.css}">
+    <link rel="stylesheet" th:href="@{./location/styles/location.css}">
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=034b0e16100e014c1099d177eff588d7"></script>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+<main>
+    <section class="location-header">
+        <div class="location-bg" th:style="'background-image: url(/location/images/location.jpg)'"></div>
+        <h1 class="location-title">찾아오는 길</h1>
+    </section>
+
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+
+    <section class="location-info">
+        <p class="location-text">대구광역시 동구 팔공로27길 33</p>
+        <p class="location-text">TEL : 053-956-0400</p>
+    </section>
+</main>
+<script type="text/javascript">
+    const container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+    const options = { //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(35.9113160898794, 128.637237804772), //지도의 중심좌표.
+        level: 3 //지도의 레벨(확대, 축소 정도)
+    };
+
+    const map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+    const markerPosition = new kakao.maps.LatLng(35.9113160898794, 128.637237804772);
+
+    const marker = new kakao.maps.Marker({
+        position: markerPosition // 마커의 위치
+    });
+    marker.setMap(map);
+
+    kakao.maps.event.addListener(marker, "click", function () {
+        const kakaoMapUrl = `https://map.kakao.com/?urlX=869477&urlY=673608&SHOWMARK=true`;
+        window.open(kakaoMapUrl, "_blank"); // 새 창에서 열기
+    });
+</script>
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>
