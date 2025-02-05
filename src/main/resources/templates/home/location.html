@@ -13,7 +13,7 @@
 <main>
     <section class="location-header">
         <div class="location-bg" th:style="'background-image: url(/location/images/location.jpg)'"></div>
-        <h1 class="location-title">찾아오는 길</h1>
+        <h1 class="location-title">위치 안내</h1>
     </section>
 
     <div class="map-container">
@@ -42,7 +42,7 @@
     marker.setMap(map);
 
     kakao.maps.event.addListener(marker, "click", function () {
-        const kakaoMapUrl = `https://map.kakao.com/?urlX=869477&urlY=673608&SHOWMARK=true`;
+        const kakaoMapUrl = `https://map.kakao.com/link/to/LKsystem,35.9113160898794,128.637237804772`;
         window.open(kakaoMapUrl, "_blank"); // 새 창에서 열기
     });
 </script>

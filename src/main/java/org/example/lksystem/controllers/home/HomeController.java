@@ -29,4 +29,25 @@ public class HomeController {
         modelAndView.setViewName("home/location");
         return modelAndView;
     }
+
+    @RequestMapping(value = "/services", method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
+    public ModelAndView services() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("home/services");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/projects", method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
+    public ModelAndView projects() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("home/projects");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/contact", method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
+    public ModelAndView contact() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("home/contact");
+        return modelAndView;
+    }
 }
