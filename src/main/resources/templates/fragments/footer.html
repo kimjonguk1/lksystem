@@ -1,0 +1,28 @@
+<footer class="footer" th:fragment="footer">
+    <div class="footer-container">
+        <!-- 왼쪽: 회사 정보 -->
+        <div class="footer-info">
+            <p><strong>상 호:</strong> 주식회사 엘케이시스템</p>
+            <p><strong>대 표:</strong> 이 승 역</p>
+            <p><strong>연락처:</strong> 053-956-0400</p>
+            <p><strong>주소:</strong> 대구광역시 동구 팔공로27길 33</p>
+            <p class="footer-copy">© 2024 LKSystem. All Rights Reserved.</p>
+        </div>
+
+        <!-- 가운데: 네비게이션 링크 -->
+        <div class="footer-nav">
+            <a th:href="@{/about}">회사 소개</a>
+            <a th:href="@{/services}">사업분야</a>
+            <a th:href="@{/projects}">시공사례</a>
+            <a th:href="@{/contact}">견적문의</a>
+            <a th:href="@{/location}">위치안내</a>
+        </div>
+
+        <!-- 오른쪽: 네이버 블로그 아이콘 -->
+        <div class="footer-social">
+            <a href="https://blog.naver.com/lktsj00" target="_blank">
+                <img src="/home/images/naver_blog_icon.png" alt="네이버 블로그">
+            </a>
+        </div>
+    </div>
+</footer>

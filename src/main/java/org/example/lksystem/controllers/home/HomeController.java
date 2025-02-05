@@ -15,4 +15,11 @@ public class HomeController {
         modelAndView.setViewName("home/index");
         return modelAndView;
     }
+
+    @RequestMapping(value = "/about", method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
+    public ModelAndView about() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("about/about");
+        return modelAndView;
+    }
 }

@@ -6,47 +6,34 @@
     <title>LKsystem</title>
     <link rel="stylesheet" th:href="@{./home/styles/home.css}">
     <script defer th:src="@{./home/scripts/home.js}"></script>
+    <script src="https://kit.fontawesome.com/8bb132eaf4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header class="header">
-    <nav class="nav">
-        <div class="nav-logo">LKsystem</div>
-        <div class="nav-menu">
-            <a href="#" class="nav-link">회사소개</a>
-            <a href="#" class="nav-link">서비스</a>
-            <a href="#" class="nav-link">견적문의</a>
-            <a href="#" class="nav-link">고객센터</a>
-            <a href="#" class="nav-link">위치안내</a>
-        </div>
-    </nav>
-</header>
-
+<div th:replace="fragments/header :: header"></div>
 <main>
     <section class="hero">
         <div class="carousel">
             <div class="carousel-track">
                 <div class="carousel-slide active">
-                    <img th:src="@{./home/images/car4.jpg}" alt="자동차 배터리 교체 서비스">
+                    <img th:src="@{./home/images/car1.jpg}" class="carousel-image" alt="자동차 배터리 교체 서비스">
                     <div class="carousel-content">
-                        <h1>전문가의 배터리 교체 서비스</h1>
+                        <h1 class="company-name">
+                            <span class="lk">LK</span><span class="system">system</span>
+                        </h1>
+<!--                        <img th:src="@{./home/images/Logo.png}" alt="로고" class="company-logo">-->
+                        <p>전기차 충전기 전문 시공업체</p>
+                        <p class="bold">엘케이시스템</p>
                     </div>
                 </div>
                 <div class="carousel-slide">
-                    <img th:src="@{./home/images/car5.jpg}" alt="자동차 배터리 교체 서비스">
+                    <img th:src="@{./home/images/car6.jpg}" class="carousel-image" alt="자동차 배터리 교체 서비스">
                     <div class="carousel-content">
-                        <h1>24시간 긴급출동 서비스</h1>
-                    </div>
-                </div>
-                <div class="carousel-slide">
-                    <img th:src="@{./home/images/car6.jpg}" alt="자동차 배터리 교체 서비스">
-                    <div class="carousel-content">
-                        <h1>정확한 배터리 진단</h1>
+                        <p>전국 어디든, 신속한 출장 서비스 제공</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-nav">
                 <button class="carousel-indicator active"></button>
-                <button class="carousel-indicator"></button>
                 <button class="carousel-indicator"></button>
             </div>
             <button class="carousel-button carousel-button-left">&lt;</button>
@@ -55,27 +42,26 @@
     </section>
 
     <section class="services">
-        <h2 class="services-title">전문적인 배터리 서비스</h2>
-        <p class="services-subtitle">최고의 전문가가 제공하는 차량 배터리 솔루션</p>
+        <h2 class="services-title">전기차 충전기 & 전기공사 전문 시공</h2>
+        <p class="services-subtitle">ISO 9001 & ISO 14001 인증, 신뢰할 수 있는 엘케이시스템</p>
 
         <div class="services-grid">
             <div class="service-card">
+                <i class="fa-solid fa-charging-station fa-xl" style="color: #FFD43B; font-size: 3rem; margin-bottom: 3rem; margin-top: 2rem; margin-left: 1.1rem;"></i>
+                <h3>전기차 충전기 설치</h3>
+            </div>
+            <div class="service-card">
+                <div class="service-card-icon">🏠</div>
+                <h3>전기공사 & 계량기 공사</h3>
+            </div>
+            <div class="service-card">
                 <div class="service-card-icon">🔧</div>
-                <h3>배터리 교체</h3>
-                <p>신속하고 전문적인 배터리 교체 서비스</p>
-            </div>
-            <div class="service-card">
-                <div class="service-card-icon">🚗</div>
-                <h3>출장 서비스</h3>
-                <p>24시간 긴급 출장 서비스 제공</p>
-            </div>
-            <div class="service-card">
-                <div class="service-card-icon">📊</div>
-                <h3>정밀 진단</h3>
-                <p>전문 장비를 통한 정확한 배터리 상태 진단</p>
+                <h3>유지보수 & A/S</h3>
             </div>
         </div>
     </section>
 </main>
+<div th:replace="fragments/footer :: footer"></div>
+
 </body>
 </html>
