@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title} ?: 'LKSystem'">LKSystem</title>
+    <link rel="stylesheet" th:href="@{/home/styles/home.css}">
+    <script defer th:src="@{/home/scripts/home.js}"></script>
+</head>
+<body>
+<header class="header" th:fragment="header">
+    <nav class="nav">
+        <div class="nav-logo">
+            <a href="/" class="logo-link">
+                <img th:src="@{./home/images/LKsystem_logo.png}" alt="LKSystem 로고" class="logo-image">
+            </a>
+        </div>
+        <div class="nav-menu">
+            <a th:href="@{/about}" class="nav-link">회사소개</a>
+            <a th:href="@{/services}" class="nav-link">사업분야</a>
+            <a th:href="@{/projects}" class="nav-link">시공사례</a>
+            <a th:href="@{/contact}" class="nav-link">견적문의</a>
+            <a th:href="@{/location}" class="nav-link">위치안내</a>
+        </div>
+    </nav>
+</header>
+</body>
+</html>
