@@ -11,9 +11,10 @@
 <div th:replace="~{fragments/header :: header}"></div>
 <main>
     <section class="service-header">
-        <div class="service-bg" th:style="'background-image: url(/services/images/services.jpg)'"></div>
+        <div class="service-bg" th:style="'background-image: url(/services/images/services_bg.jpg)'"></div>
         <h1 class="service-title">사업 분야</h1>
     </section>
+    <img class="service-image" th:src="@{./services/images/services.png}" alt="serviceImg"></img>
 </main>
 <div th:replace="~{fragments/footer :: footer}"></div>
 
