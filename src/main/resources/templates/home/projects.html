@@ -6,6 +6,7 @@
   <title>LKsystem</title>
   <link rel="stylesheet" th:href="@{./home/styles/home.css}">
   <link rel="stylesheet" th:href="@{./projects/styles/projects.css}">
+  <script defer th:src="@{./projects/scripts/projects.js}"></script>
 </head>
 <body>
 <div th:replace="~{fragments/header :: header}"></div>
@@ -14,6 +15,12 @@
     <div class="project-bg" th:style="'background-image: url(/projects/images/projects.jpg)'"></div>
     <h1 class="project-title">시공 사례</h1>
   </section>
+
+  <div class="grid-container" id="construction-list">
+
+  </div>
+  <button id="load-more" class="load-more-btn">더보기</button>
+
 </main>
 <div th:replace="~{fragments/footer :: footer}"></div>
 

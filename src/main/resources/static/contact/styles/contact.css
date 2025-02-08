@@ -1,7 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1;
+}
+
+main {
+    flex: 1;
+}
+
 .contact-header {
     position: relative;
     width: 100%;
-    height: 250px; /* 높이 조정 */
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +30,7 @@
     width: 100%;
     height: 100%;
     background: url('/contact/images/contact.jpg') center/cover no-repeat;
-    filter: brightness(50%); /* 흐림 효과 */
+    filter: brightness(50%);
 }
 
 .contact-title {
@@ -24,4 +39,153 @@
     color: white;
     font-weight: bold;
     margin-top: 5rem;
+}
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.contact-container {
+    flex: 1;
+    max-width: 500px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #1A4B8C;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#email-link > a {
+    font-size: 20px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email-info {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.email-info li {
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.email-info li:last-child {
+    border-bottom: none;
+}
+
+
+.phone-section {
+    text-align: center;
+}
+
+.phone-section a {
+    font-size: 20px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.phone-section a:hover {
+    text-decoration: underline;
+}
+
+.info-text {
+    font-size: 12px;
+    color: gray;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* 📅 영업시간 테이블 스타일 */
+.business-hours {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.business-hours td {
+    padding: 8px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    text-align: left;
+}
+
+.business-hours tr:last-child td {
+    border-bottom: none;
+}
+
+/* '정보 없음' 스타일 */
+.business-hours .closed {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* 추가된 정보 박스 스타일 */
+.info-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+    font-size: 1.2rem;
+    color: #1A4B8C;
+    margin-bottom: 8px;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #555;
+    margin: 4px 0;
+}
+
+.info-box a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
 }
