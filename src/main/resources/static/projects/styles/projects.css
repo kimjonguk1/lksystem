@@ -26,66 +26,81 @@
     margin-top: 5rem;
 }
 
-/* 시공 사례 그리드 컨테이너 */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* 반응형 적용 */
+    gap: 40px;
+    padding: 40px 5%;
+    max-width: 1400px;
     margin: 0 auto;
+    justify-content: center;
 }
 
 /* 시공 카드 스타일 */
 .construction-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 380px;
+    margin: auto;
+    padding-bottom: 15px;
 }
 
-.construction-card:hover {
-    transform: translateY(-5px);
-}
-
-/* 이미지 스타일 */
+/* ✅ 이미지 크기 통일 */
 .construction-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    width: 350px;
+    height: 230px; /* 모든 이미지 높이를 250px로 고정 */
+    object-fit: cover; /* 이미지 비율 유지 + 넘치는 부분 크롭 */
+    border-radius: 10px;
 }
 
-/* 시공 정보 */
+/* 설명 부분 스타일 (이미지와 분리) */
 .construction-info {
-    padding: 15px;
+    width: 100%;
+    text-align: left;
+    padding: 15px 10px;
+    min-height: 120px; /* ✅ 설명 영역 높이 일정하게 유지 */
 }
 
+/* 제목 스타일 */
 .construction-info h3 {
-    margin: 5px 0;
+    margin: 10px 0;
     font-size: 18px;
-    color: #333;
+    color: #222;
+    font-weight: bold;
 }
 
+/* 일반 텍스트 스타일 */
 .construction-info p {
     font-size: 14px;
-    color: #666;
+    color: #555;
     margin: 5px 0;
+    display: flex;
+    align-items: center;
 }
 
+/* 아이콘 스타일 */
 .construction-info .icon {
     color: #ff7b00;
     margin-right: 5px;
 }
 
-/* "더보기" 버튼 스타일 */
+/* 번호 및 날짜 스타일 */
+.project-meta {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+/* 더보기 버튼 스타일 */
 .load-more-btn {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #007BFF;
+    background-color: #1A4B8C;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -93,8 +108,46 @@
 }
 
 .load-more-btn:hover {
-    background-color: #0056b3;
+    background-color: #1A2A4B;
 }
+
+/* ✅ 모달 초기 숨김 */
+.modal {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+/* ✅ 모달 내부 이미지 */
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ 닫기 버튼 */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
 
 /* 반응형 (모바일 최적화) */
 @media (max-width: 768px) {

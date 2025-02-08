@@ -1,48 +1,51 @@
 document.addEventListener("DOMContentLoaded", function() {
     const constructionList = document.getElementById("construction-list");
-    const loadMoreBtn = document.getElementById("load-more");
-    let page = 1;  // 현재 페이지 번호
-    const itemsPerPage = 6;  // 한 번에 로드할 개수
-    let data = [];  // 전체 데이터를 저장할 배열
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const closeBtn = document.querySelector(".close");
 
-    // JSON 파일에서 전체 데이터 불러오기
+    modal.style.display = "none";
+
     fetch("/projects/data/projects-data.json")
         .then(response => response.json())
         .then(jsonData => {
-            data = jsonData;
-            loadMoreData();  // 초기 데이터 로드
+            loadAllData(jsonData);
         })
         .catch(error => console.error("시공 사례 데이터를 불러오는 중 오류 발생:", error));
 
-    // 특정 페이지 데이터 로딩 함수
-    function loadMoreData() {
-        const startIndex = (page - 1) * itemsPerPage;
-        const endIndex = startIndex + itemsPerPage;
-        const itemsToShow = data.slice(startIndex, endIndex);
-
-        itemsToShow.forEach(construction => {
+    function loadAllData(data) {
+        data.forEach(construction => {
             const card = document.createElement("div");
             card.classList.add("construction-card");
 
             card.innerHTML = `
-                <img src="${construction.image}" alt="${construction.region}">
+                <img src="${construction.image}" alt="${construction.region}" class="clickable-image">
                 <div class="construction-info">
-                    <h3>${construction.region} - ${construction.company} 😊</h3>
-                    <p><span class="icon">📅</span> 날짜: ${construction.date}</p>
+                    <p class="project-meta">No.${construction.id}</p>
+                    <h3>${construction.company}</h3>
+                    <p><span class="icon">⚡</span>설치장소: ${construction.region}</p>
+                    <p><span class="icon">⚡</span>설치날짜: ${construction.date}</p>
                 </div>
             `;
 
             constructionList.appendChild(card);
         });
 
-        page++;
-
-        // 모든 데이터를 불러왔을 경우 "더보기" 버튼 숨기기
-        if (endIndex >= data.length) {
-            loadMoreBtn.style.display = "none";
-        }
+        document.querySelectorAll(".clickable-image").forEach(img => {
+            img.addEventListener("click", function() {
+                modal.style.display = "flex";
+                modalImage.src = this.src;
+            });
+        });
     }
 
-    // "더보기" 버튼 클릭 시 다음 페이지 로드
-    loadMoreBtn.addEventListener("click", loadMoreData);
+    closeBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
 });

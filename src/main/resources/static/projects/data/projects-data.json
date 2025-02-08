@@ -2,126 +2,126 @@
   {
     "id": 1,
     "date": "2025-02-06",
-    "region": "시흥",
+    "region": "경기도 시흥시",
     "company": "보원화스너",
     "image": "/projects/images/construction_1.jpg"
   },
   {
     "id": 2,
     "date": "2025-02-05",
-    "region": "대구",
+    "region": "대구광역시 서구",
     "company": "대구제일사",
     "image": "/projects/images/construction_2.jpg"
   },
   {
     "id": 3,
     "date": "2025-02-04",
-    "region": "용인",
+    "region": "경기도 용인시",
     "company": "개인고객",
     "image": "/projects/images/construction_3.jpg"
   },
   {
     "id": 4,
     "date": "2025-02-03",
-    "region": "서울 중구",
+    "region": "서울특별시 중구",
     "company": "펜카페코리아",
     "image": "/projects/images/construction_4.jpg"
   },
   {
     "id": 5,
     "date": "2025-01-20",
-    "region": "아산",
+    "region": "충청남도 아산시",
     "company": "개인고객",
     "image": "/projects/images/construction_5.jpg"
   },
   {
     "id": 6,
     "date": "2025-01-16",
-    "region": "서초구",
+    "region": "서울특별시 서초구",
     "company": "",
     "image": "/projects/images/construction_6.jpg"
   },
   {
     "id": 7,
     "date": "2025-01-15",
-    "region": "서천",
+    "region": "충청남도 서천군",
     "company": "전기공사",
     "image": "/projects/images/construction_7.jpg"
   },
   {
     "id": 8,
     "date": "2025-01-14",
-    "region": "광명",
+    "region": "경기도 광명시",
     "company": "차량견인사무소",
     "image": "/projects/images/construction_8.jpg"
   },
   {
     "id": 9,
     "date": "2025-01-08",
-    "region": "은평구",
+    "region": "서울특별시 은평구",
     "company": "",
     "image": "/projects/images/construction_9.jpg"
   },
   {
     "id": 10,
     "date": "2025-01-06",
-    "region": "음성",
+    "region": "충청북도 음성군",
     "company": "신강테크",
     "image": "/projects/images/construction_10.jpg"
   },
   {
     "id": 11,
     "date": "2024-12-12",
-    "region": "충남 예산",
+    "region": "충청남도 예산군",
     "company": "조상연 고객님",
     "image": "/projects/images/construction_11.jpg"
   },
   {
     "id": 12,
     "date": "2024-11-20",
-    "region": "경기 화성",
+    "region": "경기도 화성시",
     "company": "심하연가",
     "image": "/projects/images/construction_12.jpg"
   },
   {
     "id": 13,
     "date": "2024-11-11",
-    "region": "충북 충주",
+    "region": "충청북도 충주시",
     "company": "이여준 고객님",
     "image": "/projects/images/construction_13.jpg"
   },
   {
     "id": 14,
     "date": "2024-10-09",
-    "region": "경기 남양주",
+    "region": "경기도 남양주시",
     "company": "금준호 고객님",
     "image": "/projects/images/construction_14.jpg"
   },
   {
     "id": 15,
     "date": "2024-08-26",
-    "region": "강원 철원",
+    "region": "강원도 철원군",
     "company": "김태현 고객님",
     "image": "/projects/images/construction_15.jpg"
   },
   {
     "id": 16,
     "date": "2024-07-24",
-    "region": "인천",
+    "region": "인천광역시",
     "company": "김민지 고객님",
     "image": "/projects/images/construction_16.jpg"
   },
   {
     "id": 17,
     "date": "2024-06-27",
-    "region": "울산",
+    "region": "울산광역시",
     "company": "예인상사(개나리벽지)",
     "image": "/projects/images/construction_17.jpg"
   },
   {
     "id": 18,
     "date": "2024-05-24",
-    "region": "경기 수원",
+    "region": "경기도 수원시",
     "company": "예림교회",
     "image": "/projects/images/construction_18.jpg"
   }
