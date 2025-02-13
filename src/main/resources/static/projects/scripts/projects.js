@@ -3,23 +3,46 @@ document.addEventListener("DOMContentLoaded", function() {
     const modal = document.getElementById("imageModal");
     const modalImage = document.getElementById("modalImage");
     const closeBtn = document.querySelector(".close");
+    const loading = document.getElementById("loading");
 
     modal.style.display = "none";
+    loading.classList.remove("hidden");
 
-    fetch("/projects/data/projects-data.json")
+    fetch("/projects/data/projects-data.json") // json 데이터 불러오기(데이터 수정 필요 시 data.json 파일 수정)
         .then(response => response.json())
         .then(jsonData => {
-            loadAllData(jsonData);
+            return loadAllData(jsonData);
         })
-        .catch(error => console.error("시공 사례 데이터를 불러오는 중 오류 발생:", error));
+        .then(() => {
+            loading.classList.add("hidden"); //이미지가 다 로드되면 로딩창 제거
+        })
+        .catch(error => {
+            loading.classList.add("hidden"); //오류가 떠도 로딩창 제거
+        });
 
     function loadAllData(data) {
+        const imageLoadPromises = [];
+
         data.forEach(construction => {
             const card = document.createElement("div");
             card.classList.add("construction-card");
 
-            card.innerHTML = `
-                <img src="${construction.image}" alt="${construction.region}" class="clickable-image">
+            const img = document.createElement("img");
+            img.src = construction.image;
+            img.alt = construction.region;
+            img.classList.add("clickable-image");
+            img.loading = "lazy";
+
+            const imgLoadPromise = new Promise((resolve) => {
+                img.onload = resolve;
+                img.onerror = resolve;
+            });
+
+            imageLoadPromises.push(imgLoadPromise);
+
+            card.appendChild(img);
+
+            card.innerHTML += `
                 <div class="construction-info">
                     <p class="project-meta">No.${construction.id}</p>
                     <h3>${construction.company}</h3>
@@ -37,6 +60,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 modalImage.src = this.src;
             });
         });
+
+        return Promise.all(imageLoadPromises);
     }
 
     closeBtn.addEventListener("click", function() {
