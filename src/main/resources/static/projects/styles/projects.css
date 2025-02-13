@@ -1,7 +1,7 @@
 .project-header {
     position: relative;
     width: 100%;
-    height: 250px; /* 높이 조정 */
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@
     width: 100%;
     height: 100%;
     background: url('/projects/images/projects.jpg') center/cover no-repeat;
-    filter: brightness(50%); /* 흐림 효과 */
+    filter: brightness(50%);
 }
 
 .project-title {
@@ -28,7 +28,7 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* 반응형 적용 */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 40px;
     padding: 40px 5%;
     max-width: 1400px;
@@ -36,7 +36,7 @@
     justify-content: center;
 }
 
-/* 시공 카드 스타일 */
+
 .construction-card {
     display: flex;
     flex-direction: column;
@@ -47,23 +47,22 @@
     padding-bottom: 15px;
 }
 
-/* ✅ 이미지 크기 통일 */
+
 .construction-card img {
     width: 350px;
-    height: 230px; /* 모든 이미지 높이를 250px로 고정 */
-    object-fit: cover; /* 이미지 비율 유지 + 넘치는 부분 크롭 */
+    height: 230px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
-/* 설명 부분 스타일 (이미지와 분리) */
 .construction-info {
     width: 100%;
     text-align: left;
     padding: 15px 10px;
-    min-height: 120px; /* ✅ 설명 영역 높이 일정하게 유지 */
+    min-height: 120px;
 }
 
-/* 제목 스타일 */
+
 .construction-info h3 {
     margin: 10px 0;
     font-size: 18px;
@@ -71,7 +70,7 @@
     font-weight: bold;
 }
 
-/* 일반 텍스트 스타일 */
+
 .construction-info p {
     font-size: 14px;
     color: #555;
@@ -80,20 +79,19 @@
     align-items: center;
 }
 
-/* 아이콘 스타일 */
 .construction-info .icon {
     color: #ff7b00;
     margin-right: 5px;
 }
 
-/* 번호 및 날짜 스타일 */
+
 .project-meta {
     font-size: 12px;
     color: #888;
     margin-bottom: 5px;
 }
 
-/* 더보기 버튼 스타일 */
+
 .load-more-btn {
     display: block;
     margin: 20px auto;
@@ -111,7 +109,7 @@
     background-color: #1A2A4B;
 }
 
-/* ✅ 모달 초기 숨김 */
+
 .modal {
     display: none; /* 기본적으로 숨김 */
     position: fixed;
@@ -125,7 +123,6 @@
     justify-content: center;
 }
 
-/* ✅ 모달 내부 이미지 */
 .modal-content {
     max-width: 90%;
     max-height: 90%;
@@ -133,7 +130,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* ✅ 닫기 버튼 */
+
 .close {
     position: absolute;
     top: 15px;
@@ -148,8 +145,35 @@
     color: #bbb;
 }
 
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+}
 
-/* 반응형 (모바일 최적화) */
+#loading img {
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr;
