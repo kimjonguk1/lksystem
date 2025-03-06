@@ -11,6 +11,11 @@
 <body>
 <div th:replace="~{fragments/header :: header}"></div>
 <main>
+
+    <div id="loading">
+        <img src="data:image/png;base64,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" alt="로딩 중...">
+    </div>
+
     <section class="about-header">
         <div class="about-bg" th:style="'background-image: url(/about/images/about_bg.jpg)'"></div>
         <h1 class="about-title">회사 소개</h1>
@@ -28,8 +33,10 @@
             <div class="about-container">
                 <div class="about-text">
                     <p>안녕하세요?<br> ISO 9001 : 2015 & ISO 14001 : 2015 인증받은 전기공사 및 전자응용장치의 개발 및 제조 <strong style="color: #006AB8">엘케이시스템</strong>입니다.</p>
-                    <p>LK시스템은 2012년부터 <strong>전기공사, 태양광발전소 설치, CCTV, 전기차 충전기</strong>를 설치해 드리는 업체이며</p>
-                    <p>전국의 <strong>휴게소, 관공서, 카페, 주택, 병원, 숙박업체 등 1000곳 이상</strong>의 장소에 전기차 충전기 설치 및 유지 보수를 하고 있습니다.</p>
+                    <p>LK시스템은 2012년부터 <strong>전기공사, 태양광발전소 설치, 전기차 충전기</strong>시설 업체이며
+                    </p>
+                    <p>전국의 <strong>휴게소, 관공서, 카페, 주택, 병원, 숙박업체 등 매년 1000여 곳 이상</strong>의 장소에 전기차 충전기 설치 및 유지 보수를 하고 있습니다.
+                    </p>
                     <p>전국구 한국전력공사 신규 <strong> 계량기공사, 전기증설, 태양광발전,<br> 전기차충전기, CCTV</strong> 및 각종 전기공사 모두 직접 시공합니다.</p>
                     <p>합리적인 설치 비용, 만족스러운 시공, 신속한 A/S</p>
                     <p>LK시스템에서 책임져 드립니다.</p>
@@ -42,15 +49,145 @@
         </div>
 
         <!-- 연혁 -->
-        <div id="history" class="content-section">
-            <img src="/about/images/history.png" alt="회사 연혁">
-        </div>
+        <section id="history" class="content-section">
+            <section class="timeline-wrapper">
+                <div class="middle-line"></div>
 
+                <!-- 2024년 -->
+                <div class="box box-top">
+                    <div class="date">
+                        <p>2024</p>
+                    </div>
+                    <div class="box-content">
+                        <p><strong>01월</strong> : (주)피콕 계약체결</p>
+                        <br>
+                        <p><strong>12월</strong> : 회사 분할합병 (통신면허)</p>
+                    </div>
+                </div>
+
+                <!-- 2022년 (연혁이 3개 이상이므로 스크롤 추가) -->
+                <div class="box box-bottom">
+                    <div class="date">
+                        <p>2022</p>
+                    </div>
+                    <div class="box-content scroll-box">
+                        <p><strong>12월</strong> : LG유플러스 대리점 계약 (2023 ~ 현재)</p>
+                        <br>
+                        <p><strong>01월</strong> : 비공용(개인) 충전기 설치 공사 확장</p>
+                        <p>(한국홈충전 주식회사, 이브이모아 외 3개 업체)</p>
+                        <br>
+                        <p><strong>05월</strong> : 남부산전 네트웍스 계약체결</p>
+                        <br>
+                        <p><strong>05월</strong> : 파킹클라우드(주) 협력사 등록</p>
+                        <br>
+                        <p><strong>07월</strong> : 롯데정보통신 (전기차 충전사업) 협력업체 등록</p>
+                        <br>
+                        <p><strong>08월</strong> : (주)플러그링크 협력사 등록</p>
+                        <br>
+                        <p><strong>12월</strong> : SK시그넷 협력업체 등록</p>
+                    </div>
+                </div>
+
+                <!-- 2021년 -->
+                <div class="box box-top">
+                    <div class="date">
+                        <p>2021</p>
+                    </div>
+                    <div class="box-content scroll-box">
+                        <p><strong>01월</strong> : 비공용(개인) 충전기 사업 시작</p>
+                        <br>
+                        <p><strong>04월</strong> : (주)EN 전기차 충전기 협력업체 등록</p>
+                        <br>
+                        <p><strong>08월</strong> : (주)스타코프 전기차 충전기 협력업체 등록 및 전국 유지보수 계약 체결</p>
+                    </div>
+                </div>
+
+                <!-- 2020년 -->
+                <div class="box box-bottom">
+                    <div class="date">
+                        <p>2020</p>
+                    </div>
+                    <div class="box-content">
+                        <p><strong>04월</strong> : 환경공단 급속 100KW 충전기 시공</p>
+                        <br>
+                        <p><strong>10월</strong> : (주)씨어스 전기차 충전기 협력업체 등록</p>
+                    </div>
+                </div>
+
+                <!-- 2019년 -->
+                <div class="box box-top">
+                    <div class="date">
+                        <p>2019</p>
+                    </div>
+                    <div class="box-content">
+                        <p><strong>02월</strong> : (주)중앙제어(현 : (주)이브이시스) 협력업체 등록</p>
+                        <br>
+                        <p><strong>06월</strong> : (주) GNT 전기차 충전기 업체 등록</p>
+                    </div>
+                </div>
+
+                <!-- 2018년 -->
+                <div class="box box-bottom">
+                    <div class="date">
+                        <p>2018</p>
+                    </div>
+                    <div class="box-content">
+                        <p><strong>11월</strong> : (주)제주전기차 충전 S/V 협력업체 등록</p>
+                    </div>
+                </div>
+
+                <!-- 2017년 -->
+                <div class="box box-top">
+                    <div class="date">
+                        <p>2017</p>
+                    </div>
+                    <div class="box-content">
+                        <p><strong>01월</strong> : KT 전기차 충전기 시공</p>
+                    </div>
+                </div>
+
+                <!-- 2016년 -->
+                <div class="box box-bottom">
+                    <div class="date">
+                        <p>2016</p>
+                    </div>
+                    <div class="box-content scroll-box">
+                        <p><strong>03월</strong> : 한국전파진흥협회 회원사 등록</p>
+                        <br>
+                        <p><strong>12월</strong> : 한국전기공사협회 회원사 등록 (제 대구-01098호)</p>
+                    </div>
+                </div>
+
+                <!-- 2015년 -->
+                <div class="box box-top">
+                    <div class="date">
+                        <p>2015</p>
+                    </div>
+                    <div class="box-content">
+                        <p><strong>10월</strong> : 사업장 이전 (대구시 북구 → 동구)</p>
+                    </div>
+                </div>
+
+                <!-- 2012년 -->
+                <div class="box box-bottom">
+                    <div class="date">
+                        <p>2012</p>
+                    </div>
+                    <div class="box-content">
+                        <p><strong>08월</strong> : 회사 설립</p>
+                        <br>
+                        <p><strong>09월</strong> : 정보통신공사협회 회원사 등록 (제530215호)</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </section>
 
 
         <!-- 조직도 -->
         <div id="organization" class="content-section">
-            <img src="/about/images/organization.jpg" alt="회사 조직도">
+            <img src="/about/images/organization.png" alt="회사 조직도">
         </div>
     </section>
 </main>
