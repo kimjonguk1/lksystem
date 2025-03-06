@@ -55,8 +55,9 @@
 /* 🔹 컨텐츠 영역 */
 .about-content {
     text-align: center;
-    margin: 2rem auto;
-    max-width: 1000px;
+    margin: 8rem 0 8rem 2rem;
+    max-width: 1900px; /* 기존 1000px → 1900px으로 확장 */
+    width: 95%; /* 화면 크기에 따라 유동적으로 확장 */
 }
 
 /* 🔹 회사 소개 컨텐츠 */
@@ -88,19 +89,12 @@
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    opacity: 0.6;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.about-image img:hover {
-    opacity: 1;
 }
 
 /* 🔹 연혁 및 조직도 이미지 */
 .content-section img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
-    border-radius: 10px;
 }
 
 /* 🔹 숨김/활성화 */
@@ -112,4 +106,180 @@
     display: block;
 }
 
-/* 연혁 */
+
+.timeline-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 40px auto; /* 상하 여백 추가 */
+    margin-left: 60px; /* 전체를 오른쪽으로 이동 */
+    height: 350px;
+}
+
+.timeline-wrapper .middle-line {
+    position: absolute;
+    width: 97%;
+    height: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, #66CCFF, #1A4BBC);
+}
+
+.box {
+    width: 10%; /* 간격 유지 */
+    position: relative;
+    min-height: 350px;
+    float: right;
+    overflow: visible !important;
+}
+
+.box .date {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #FFFFFF;
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(90deg, #66CCFF, #3388CC);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.date p {
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 0px;
+    color: #1A4B8C;
+    font-weight: bold;
+}
+
+.box .box-content {
+    border-radius: 5px;
+    background-color: #1A4BBC;
+    width: 200px;
+    min-height: 120px;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    left: -72px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; /* 세로 중앙 정렬 */
+    text-align: left;
+}
+
+.box-content p {
+    margin: 0;
+    color: white;
+}
+
+.box-content p strong {
+    color: #66CCFF;  /* "월" 부분 강조 색상 (골드) */
+    font-weight: bold;
+}
+
+
+.box-bottom .box-content {
+    top: 70%;
+}
+
+.box-top .box-content {
+    bottom: 70%;
+}
+
+.box-content::before {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+}
+
+/* 🔹 스크롤 박스만 따로 정렬 조정 */
+.box .scroll-box {
+    justify-content: flex-start;  /* 내용이 위쪽부터 표시됨 */
+    align-items: flex-start;  /* 좌측 정렬 */
+    padding-top: 10px; /* 내부 여백 추가 */
+}
+
+/* 🔹 스크롤 스타일 */
+.scroll-box::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+    background-color: #004080; /* 어두운 파란색 스크롤바 */
+    border-radius: 5px;
+}
+
+.scroll-box::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* 🔹 하단 박스의 화살표 (상단에 표시) */
+.box-bottom::after {
+    content: "";
+    position: absolute;
+    top: 235px; /* 박스 위쪽 */
+    left: 14%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #1A4BBC; /* 화살표 색상 */
+}
+
+/* 🔹 상단 박스의 화살표 (하단에 표시) */
+.box-top::after {
+    content: "";
+    position: absolute;
+    bottom: 235px; /* 박스 아래쪽 */
+    left: 14%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #1A4BBC; /* 화살표 색상 */
+}
+
+
+
+
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+}
+
+#loading img {
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}

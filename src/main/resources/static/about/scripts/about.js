@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".content-section");
     const bg = document.querySelector(".about-bg");
     const title = document.querySelector(".about-title");
+    const loading = document.getElementById("loading");
 
     const titles = {
         intro: "회사 소개",
@@ -16,22 +17,55 @@ document.addEventListener("DOMContentLoaded", function () {
         organization: "/about/images/organization_bg.jpg"
     };
 
+    const activeTab = document.querySelector(".sub-nav-link.active");
+    if (activeTab) {
+        const sectionId = activeTab.getAttribute("data-section");
+        title.textContent = titles[sectionId];
+
+        const img = new Image();
+        img.src = bgImages[sectionId];
+
+        img.onload = function () {
+            bg.style.backgroundImage = `url(${img.src})`;
+            loading.classList.add("hidden");
+        };
+
+        img.onerror = function () {
+            loading.classList.add("hidden");
+        };
+    }
+
     tabs.forEach(tab => {
         tab.addEventListener("click", function () {
+            loading.classList.remove("hidden");
+
             const sectionId = this.getAttribute("data-section");
 
-            // 탭 활성화 변경
             tabs.forEach(t => t.classList.remove("active"));
             this.classList.add("active");
 
-            // 컨텐츠 변경
             sections.forEach(sec => sec.classList.remove("active"));
             document.getElementById(sectionId).classList.add("active");
 
-            // 배경 이미지 변경
-            bg.style.backgroundImage = `url(${bgImages[sectionId]})`;
-
             title.textContent = titles[sectionId];
+
+            const img = new Image();
+            img.src = bgImages[sectionId];
+
+            if (img.complete) {
+                bg.style.backgroundImage = `url(${img.src})`;
+                loading.classList.add("hidden");
+                return;
+            }
+
+            img.onload = function () {
+                bg.style.backgroundImage = `url(${img.src})`;
+                loading.classList.add("hidden");
+            };
+
+            img.onerror = function () {
+                loading.classList.add("hidden");
+            };
         });
     });
 });

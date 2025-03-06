@@ -3,126 +3,292 @@
     "id": 1,
     "date": "2025-02-06",
     "region": "경기도 시흥시",
-    "company": "보원화스너",
-    "image": "/projects/images/construction_1.jpg"
+    "company": "보*화스너",
+    "image": "/projects/images/construction_1.jpg",
+    "category": "private"
   },
   {
     "id": 2,
     "date": "2025-02-05",
     "region": "대구광역시 서구",
-    "company": "대구제일사",
-    "image": "/projects/images/construction_2.jpg"
+    "company": "대*제일사",
+    "image": "/projects/images/construction_2.jpg",
+    "category": "private"
   },
   {
     "id": 3,
     "date": "2025-02-04",
     "region": "경기도 용인시",
     "company": "개인고객",
-    "image": "/projects/images/construction_3.jpg"
+    "image": "/projects/images/construction_3.jpg",
+    "category": "private"
   },
   {
     "id": 4,
     "date": "2025-02-03",
     "region": "서울특별시 중구",
-    "company": "펜카페코리아",
-    "image": "/projects/images/construction_4.jpg"
+    "company": "펜*페코리아",
+    "image": "/projects/images/construction_4.jpg",
+    "category": "private"
   },
   {
     "id": 5,
     "date": "2025-01-20",
     "region": "충청남도 아산시",
     "company": "개인고객",
-    "image": "/projects/images/construction_5.jpg"
+    "image": "/projects/images/construction_5.jpg",
+    "category": "private"
   },
   {
     "id": 6,
     "date": "2025-01-16",
     "region": "서울특별시 서초구",
     "company": "",
-    "image": "/projects/images/construction_6.jpg"
+    "image": "/projects/images/construction_6.jpg",
+    "category": "private"
   },
   {
     "id": 7,
     "date": "2025-01-15",
     "region": "충청남도 서천군",
     "company": "전기공사",
-    "image": "/projects/images/construction_7.jpg"
+    "image": "/projects/images/construction_7.jpg",
+    "category": "private"
   },
   {
     "id": 8,
     "date": "2025-01-14",
     "region": "경기도 광명시",
     "company": "차량견인사무소",
-    "image": "/projects/images/construction_8.jpg"
+    "image": "/projects/images/construction_8.jpg",
+    "category": "private"
   },
   {
     "id": 9,
     "date": "2025-01-08",
     "region": "서울특별시 은평구",
     "company": "",
-    "image": "/projects/images/construction_9.jpg"
+    "image": "/projects/images/construction_9.jpg",
+    "category": "private"
   },
   {
     "id": 10,
     "date": "2025-01-06",
     "region": "충청북도 음성군",
-    "company": "신강테크",
-    "image": "/projects/images/construction_10.jpg"
+    "company": "신*테크",
+    "image": "/projects/images/construction_10.jpg",
+    "category": "private"
   },
   {
     "id": 11,
     "date": "2024-12-12",
     "region": "충청남도 예산군",
     "company": "조상연 고객님",
-    "image": "/projects/images/construction_11.jpg"
+    "image": "/projects/images/construction_11.jpg",
+    "category": "private"
   },
   {
     "id": 12,
     "date": "2024-11-20",
     "region": "경기도 화성시",
-    "company": "심하연가",
-    "image": "/projects/images/construction_12.jpg"
+    "company": "심*연가",
+    "image": "/projects/images/construction_12.jpg",
+    "category": "private"
   },
   {
     "id": 13,
     "date": "2024-11-11",
     "region": "충청북도 충주시",
     "company": "이여준 고객님",
-    "image": "/projects/images/construction_13.jpg"
+    "image": "/projects/images/construction_13.jpg",
+    "category": "private"
   },
   {
     "id": 14,
     "date": "2024-10-09",
     "region": "경기도 남양주시",
     "company": "금준호 고객님",
-    "image": "/projects/images/construction_14.jpg"
+    "image": "/projects/images/construction_14.jpg",
+    "category": "private"
   },
   {
     "id": 15,
     "date": "2024-08-26",
     "region": "강원도 철원군",
     "company": "김태현 고객님",
-    "image": "/projects/images/construction_15.jpg"
+    "image": "/projects/images/construction_15.jpg",
+    "category": "private"
   },
   {
     "id": 16,
     "date": "2024-07-24",
     "region": "인천광역시",
     "company": "김민지 고객님",
-    "image": "/projects/images/construction_16.jpg"
+    "image": "/projects/images/construction_16.jpg",
+    "category": "private"
   },
   {
     "id": 17,
     "date": "2024-06-27",
     "region": "울산광역시",
-    "company": "예인상사(개나리벽지)",
-    "image": "/projects/images/construction_17.jpg"
+    "company": "예*상사(개나리벽지)",
+    "image": "/projects/images/construction_17.jpg",
+    "category": "private"
   },
   {
     "id": 18,
     "date": "2024-05-24",
     "region": "경기도 수원시",
-    "company": "예림교회",
-    "image": "/projects/images/construction_18.jpg"
+    "company": "예*교회",
+    "image": "/projects/images/construction_18.jpg",
+    "category": "private"
+  },
+
+  {
+    "id": 1,
+    "date": "2020-07-26",
+    "region": "부산 소재",
+    "company": "군부대 면회실",
+    "image": "/projects/images/public/public_construction_1.jpg",
+    "category": "public",
+    "charger_count": "100kW 2대"
+  },
+  {
+    "id": 2,
+    "date": "2020-07-23",
+    "region": "경북 안동시",
+    "company": "안동휴게소부산",
+    "image": "/projects/images/public/public_construction_2.jpg",
+    "category": "public",
+    "charger_count": "100kW 1대"
+  },
+  {
+    "id": 3,
+    "date": "2020-07-05",
+    "region": "경남 양산시",
+    "company": "양산휴게소서울",
+    "image": "/projects/images/public/public_construction_3.jpg",
+    "category": "public",
+    "charger_count": "100kW 2대"
+  },
+  {
+    "id": 4,
+    "date": "2020-07-03",
+    "region": "경남 진주시",
+    "company": "문산휴게소순천",
+    "image": "/projects/images/public/public_construction_4.jpg",
+    "category": "public",
+    "charger_count": "100kW 4대"
+  },
+  {
+    "id": 5,
+    "date": "2020-07-02",
+    "region": "부산 남구",
+    "company": "부산해군회관",
+    "image": "/projects/images/public/public_construction_5.jpg",
+    "category": "public",
+    "charger_count": "100kW 1대"
+  },
+  {
+    "id": 6,
+    "date": "2020-07-02",
+    "region": "부산 강서구",
+    "company": "부산해성스포렉스주차장",
+    "image": "/projects/images/public/public_construction_6.jpg",
+    "category": "public",
+    "charger_count": "100kW 2대"
+  },
+  {
+    "id": 7,
+    "date": "2020-07-02",
+    "region": "부산 기장군",
+    "company": "장안휴게소울산",
+    "image": "/projects/images/public/public_construction_7.jpg",
+    "category": "public",
+    "charger_count": "100kW 1대"
+  },
+  {
+    "id": 8,
+    "date": "2020-06-30",
+    "region": "대구 소재",
+    "company": "군 관사 주차장",
+    "image": "/projects/images/public/public_construction_8.jpg",
+    "category": "public",
+    "charger_count": "100kW 1대"
+  },
+  {
+    "id": 9,
+    "date": "2020-06-29",
+    "region": "부산 남구",
+    "company": "바다별빛어린이집",
+    "image": "/projects/images/public/public_construction_9.jpg",
+    "category": "public",
+    "charger_count": "100kW 2대"
+  },
+  {
+    "id": 10,
+    "date": "2020-06-29",
+    "region": "경남 사천시",
+    "company": "사천휴게소순천",
+    "image": "/projects/images/public/public_construction_10.jpg",
+    "category": "public",
+    "charger_count": "100kW 1대"
+  },
+  {
+    "id": 11,
+    "date": "2020-06-29",
+    "region": "경북 지역",
+    "company": "예천 군부대 주차장",
+    "image": "/projects/images/public/public_construction_11.jpg",
+    "category": "public",
+    "charger_count": "100kW 2대"
+  },
+  {
+    "id": 12,
+    "date": "2020-06-27",
+    "region": "부산 기장군",
+    "company": "장안휴게소부산",
+    "image": "/projects/images/public/public_construction_12.jpg",
+    "category": "public",
+    "charger_count": "100kW 1대"
+  },
+  {
+    "id": 13,
+    "date": "2020-06-26",
+    "region": "경남 김해",
+    "company": "징영휴게소순천",
+    "image": "/projects/images/public/public_construction_13.jpg",
+    "category": "public",
+    "charger_count": "100kW 4대"
+  },
+  {
+    "id": 14,
+    "date": "2020-06-25",
+    "region": "경남 진주",
+    "company": "진주휴게소부산",
+    "image": "/projects/images/public/public_construction_14.jpg",
+    "category": "public",
+    "charger_count": "100kW 2대"
+  },
+  {
+    "id": 15,
+    "date": "2020-06-25",
+    "region": "경북 청도군",
+    "company": "청도새마을주유소부산",
+    "image": "/projects/images/public/public_construction_15.jpg",
+    "category": "public",
+    "charger_count": "100kW 1대"
+  },
+  {
+    "id": 16,
+    "date": "2020-06-22",
+    "region": "경남 사천시",
+    "company": "사천휴게소부산",
+    "image": "/projects/images/public/public_construction_16.jpg",
+    "category": "public",
+    "charger_count": "100kW 1대"
   }
+
+
 ]
+
