@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lksystem.kr/sitemap.xml
+Sitemap: https://www.lksystem.kr/sitemap.xml
